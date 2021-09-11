@@ -1,5 +1,4 @@
-pipeline {
-  agent any
+pipelineJob('Jenkins Tutorial Demo - Library 1 (DSL)') {
   stages {
     stage('Stage 2') {
       steps {
@@ -7,4 +6,5 @@ pipeline {
       }
     }
   }
+
 }
