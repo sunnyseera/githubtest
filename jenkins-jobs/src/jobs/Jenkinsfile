@@ -1,5 +1,9 @@
-job('example') {
+job('example1') {
+    stages {
+    stage('Stage 1') {
   steps {
     shell('echo Hello World!')
   }
+}
+    }
 }
