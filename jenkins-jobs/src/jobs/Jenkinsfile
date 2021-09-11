@@ -1,7 +1,5 @@
-job('example1') {
-    stage('Stage 1') {
+job('example') {
   steps {
     shell('echo Hello World!')
   }
 }
-    }
