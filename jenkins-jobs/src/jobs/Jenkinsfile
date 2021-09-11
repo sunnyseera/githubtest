@@ -1,4 +1,4 @@
-Pipelinejob('example') {
+pipelineJob('example3') {
   steps {
     shell('echo Hello World!')
   }
