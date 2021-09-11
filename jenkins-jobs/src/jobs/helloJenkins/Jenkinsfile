@@ -1,0 +1,21 @@
+pipelineJob('Hello Jenkins') {
+  definition {
+    cps {
+      script('''
+
+      pipeline {
+          agent any
+            stages {
+              stage('Stage 1') {
+                steps {
+                  echo 'Hello Jenkins!'
+            }
+          }
+        } 
+      }
+
+      '''.stripIndent())
+      sandbox()
+    }
+  }
+}
