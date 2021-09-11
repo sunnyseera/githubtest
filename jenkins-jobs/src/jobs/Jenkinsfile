@@ -1,8 +1,9 @@
 pipelineJob('example3') {
-  steps {
-    shell('echo Hello World!')
-  }
-  steps {
-    shell('echo Hello World!')
+  stages {
+    stage('Stage 1') {
+      steps {
+        echo 'Hello world!'
+      }
+    }
   }
 }
