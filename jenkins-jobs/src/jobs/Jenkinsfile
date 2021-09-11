@@ -1,18 +1,18 @@
-pipelineJob('Deploy-K8s-Cluster') {
+pipelineJob('Hello World') {
   definition {
     cps {
       script('''
 
       pipeline {
-  agent any
-  stages {
-    stage('Stage 1') {
-      steps {
-        echo 'Hello world!'
+          agent any
+            stages {
+              stage('Stage 1') {
+                steps {
+                  echo 'Hello world!'
+            }
+          }
+        } 
       }
-    }
-  }
-}
 
       '''.stripIndent())
       sandbox()
