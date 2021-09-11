@@ -1,5 +1,4 @@
 pipelineJob('Jenkins Tutorial Demo - Library 1 (DSL)') {
-  agent any
   stages {
     stage('Stage 2') {
       steps {
