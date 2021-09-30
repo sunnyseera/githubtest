@@ -1,0 +1,28 @@
+jobs:
+  - script: >
+      pipelineJob('environment-build') {
+        displayName('Environment Build')
+        properties {
+            pipelineTriggers {
+                triggers {
+                    pollSCM {
+                        scmpoll_spec('')
+                    }
+                }
+            }
+        }
+        definition {
+          cpsScm {
+            scriptPath 'Jenkinsfile'
+            scm {
+              git {
+                branch('master')
+                remote {
+                  url('git@github.com:sunnyseera/jenkins_test.git')
+                  credentials('git-ssh')
+                }
+              }
+            }
+          }
+        }
+      }
