@@ -17,7 +17,6 @@ pipelineJob('environment-build') {
           branch('master')
           remote {
             url('git@github.com:sunnyseera/jenkins_test.git')
-            credentials('git-ssh')
           }
         }
       }
